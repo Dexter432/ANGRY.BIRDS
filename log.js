@@ -2,13 +2,14 @@ class Log {
   constructor(x, y,  height,angle) {
     var options = {
         'restitution':0.8,
-        'friction':0.3,
+        'friction':1.5,
         'density':1.0
     } 
     this.body = Bodies.rectangle(x, y,20,height, options);
     this.width = 20;
     this.height = height;
     Matter.Body.setAngle(this.body,angle)
+    this.image = loadImage("wood2.png")
     World.add(world, this.body);
   }
   display(){
@@ -17,11 +18,8 @@ class Log {
     push()
     translate(pos.x,pos.y) 
     rotate(angle)
-    rectMode(CENTER);  
-    stroke("green"); 
-    strokeWeight(3);
-    fill(255);
-    rect(0, 0, this.width, this.height);
+    imageMode(CENTER);   
+    image(this.image,0, 0, this.width, this.height);
     pop();
   }
 };

@@ -13,7 +13,7 @@ display(){
       var pos=this.chao.position
       push()
     rectMode(CENTER);
-    fill ("grey")
+    fill ("brown")
     rect(pos.x, pos.y, this.w,this.h);
     pop()
 }

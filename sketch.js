@@ -66,9 +66,16 @@ function draw(){
 
 }
 function mouseDragged(){
- Matter.Body.setPositon(angrybird.body,{x:mouseX,y:mouseY}) 
+ Matter.Body.setPosition(angrybird.body,{x:mouseX,y:mouseY}) 
 
 }
 function mouseReleased(){
     sling.fly()
 }
+  function keyPressed(){
+      console.log("tecla apertada")
+   if(keyCode===32){
+       console.log("espaço")
+    sling.attach(angrybird.body)   
+   }   
+  }
